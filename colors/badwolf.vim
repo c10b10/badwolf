@@ -58,52 +58,67 @@ let s:bwc = {}
 
 " The most basic of all our colors is a slightly tweaked version of the Molokai
 " Normal text.
+" #f8f6f2
 let s:bwc.plain = ['f8f6f2', 15]
 
 " Pure and simple.
+" #ffffff
 let s:bwc.snow = ['ffffff', 15]
+" #000000
 let s:bwc.coal = ['000000', 16]
 
 " All of the Gravel colors are based on a brown from Clouds Midnight.
+" #d9cec3
 let s:bwc.brightgravel   = ['d9cec3', 252]
+" #998f84
 let s:bwc.lightgravel    = ['998f84', 245]
+" #857f78
 let s:bwc.gravel         = ['857f78', 243]
+" #666462
 let s:bwc.mediumgravel   = ['666462', 241]
+" #45413b
 let s:bwc.deepgravel     = ['45413b', 238]
+" #35322d
 let s:bwc.deepergravel   = ['35322d', 236]
+" #242321
 let s:bwc.darkgravel     = ['242321', 235]
+" #1c1b1a
 let s:bwc.blackgravel    = ['1c1b1a', 233]
+" #141413
 let s:bwc.blackestgravel = ['141413', 232]
 
 " A color sampled from a highlight in a photo of a glass of Dale's Pale Ale on
-" my desk.
+" my desk. #fade3e
 let s:bwc.dalespale = ['fade3e', 221]
 
-" A beautiful tan from Tomorrow Night.
+" #ae81ff
+let s:bwc.grapejuice = ['ae81ff', 221]
+
+" A beautiful tan from Tomorrow Night. #f4cf86
 let s:bwc.dirtyblonde = ['f4cf86', 222]
 
-" Delicious, chewy red from Made of Code for the poppiest highlights.
+" Delicious, chewy red from Made of Code for the poppiest highlights. #ff2c4b
 let s:bwc.taffy = ['ff2c4b', 196]
 
-" Another chewy accent, but use sparingly!
+" Another chewy accent, but use sparingly! #8cffba
 let s:bwc.saltwatertaffy = ['8cffba', 121]
 
-" The star of the show comes straight from Made of Code.
+" The star of the show comes straight from Made of Code. #0a9dff
 let s:bwc.tardis = ['0a9dff', 39]
 
-" This one's from Mustang, not Florida!
+" This one's from Mustang, not Florida! #ffa724
 let s:bwc.orange = ['ffa724', 214]
 
-" A limier green from Getafe.
+" A limier green from Getafe. #aeee00
 let s:bwc.lime = ['aeee00', 154]
 
-" Rose's dress in The Idiot's Lantern.
+" Rose's dress in The Idiot's Lantern. #ff9eb8
 let s:bwc.dress = ['ff9eb8', 211]
 
-" Another play on the brown from Clouds Midnight.  I love that color.
+" Another play on the brown from Clouds Midnight.  I love that color. #b88853
 let s:bwc.toffee = ['b88853', 137]
 
-" Also based on that Clouds Midnight brown.
+" Also based on that Clouds Midnight brown. #c7915b & #88633f
 let s:bwc.coffee    = ['c7915b', 173]
 let s:bwc.darkroast = ['88633f', 95]
 
@@ -191,7 +206,7 @@ call s:HL('TabLine', 'plain', s:tabline, 'none')
 call s:HL('TabLineFill', 'plain', s:tabline, 'none')
 call s:HL('TabLineSel', 'coal', 'tardis', 'none')
 
-call s:HL('MatchParen', 'dalespale', 'darkgravel', 'bold')
+call s:HL('MatchParen', 'darkgravel', 'grapejuice', 'bold')
 
 call s:HL('NonText',    'deepgravel', 'bg')
 call s:HL('SpecialKey', 'deepgravel', 'bg')
@@ -209,7 +224,7 @@ call s:HL('StatusLineNC', 'snow', 'deepgravel', 'bold')
 
 call s:HL('Directory', 'dirtyblonde', '', 'bold')
 
-call s:HL('Title', 'lime')
+call s:HL('Title', 'orange')
 
 call s:HL('ErrorMsg',   'taffy',       'bg', 'bold')
 call s:HL('MoreMsg',    'dalespale',   '',   'bold')
@@ -491,16 +506,16 @@ call s:HL('djangoVarBlock', 'orange', '')
 " HTML {{{
 
 " Punctuation
-call s:HL('htmlTag',    'darkroast', 'bg', 'none')
-call s:HL('htmlEndTag', 'darkroast', 'bg', 'none')
+call s:HL('htmlTag',    'brightgravel', 'bg', 'none')
+call s:HL('htmlEndTag', 'brightgravel', 'bg', 'none')
 
 " Tag names
-call s:HL('htmlTagName',        'coffee', '', 'bold')
-call s:HL('htmlSpecialTagName', 'coffee', '', 'bold')
-call s:HL('htmlSpecialChar',    'lime',   '', 'none')
+call s:HL('htmlTagName',        'taffy', '', 'bold')
+call s:HL('htmlSpecialTagName', 'taffy', '', 'bold')
+call s:HL('htmlSpecialChar',    'taffy',   '', 'none')
 
 " Attributes
-call s:HL('htmlArg', 'coffee', '', 'none')
+call s:HL('htmlArg', 'lime', '', 'none')
 
 " Stuff inside an <a> tag
 
@@ -633,6 +648,16 @@ call s:HL('hlLevel6', 'orange')
 call s:HL('hlLevel7', 'saltwatertaffy')
 call s:HL('hlLevel8', 'dress')
 call s:HL('hlLevel9', 'coffee')
+
+" }}}
+
+" JavaScript {{{
+
+call s:HL('javaScriptFunction', 'saltwatertaffy', '', 'none')
+call s:HL('javaScriptIdentifier', 'taffy', '', 'none')
+call s:HL('javaScriptLabel', 'saltwatertaffy', '', 'none')
+call s:HL('javaScriptBraces', 'saltwatertaffy', '', 'none')
+call s:HL('jsFuncArgs', 'orange', '', 'none')
 
 " }}}
 " Vim {{{
