@@ -94,6 +94,15 @@ let s:bwc.dalespale = ['fade3e', 221]
 " #ae81ff
 let s:bwc.grapejuice = ['ae81ff', 221]
 
+" #3b543b
+let s:bwc.deadgrass = ['3b543b',65]
+" #8c3535
+let s:bwc.cartoonblood = ['8c3535',167]
+" #d7d7ff
+let s:bwc.grapemilk = ['d7d7ff',189]
+" #5f5f87
+let s:bwc.muddygrapemilk = ['5f5f87',60]
+
 " A beautiful tan from Tomorrow Night. #f4cf86
 let s:bwc.dirtyblonde = ['f4cf86', 222]
 
@@ -325,10 +334,10 @@ call s:HL('PmenuThumb', 'brightgravel')
 " }}}
 " Diffs {{{
 
-call s:HL('DiffDelete', 'coal', 'coal')
-call s:HL('DiffAdd',    '',     'deepergravel')
-call s:HL('DiffChange', '',     'darkgravel')
-call s:HL('DiffText',   'snow', 'deepergravel', 'bold')
+call s:HL('DiffAdd',    'coal', 'deadgrass')
+call s:HL('DiffDelete', 'coal', 'cartoonblood')
+call s:HL('DiffChange', '', 'muddygrapemilk' )
+call s:HL('DiffText',   'grapemilk', 'muddygrapemilk', 'bold')
 
 " }}}
 " Spelling {{{
